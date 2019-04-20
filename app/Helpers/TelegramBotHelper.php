@@ -46,16 +46,16 @@ class TelegramBotHelper
 //            $notifMessage .="Total TPS : ".$item['total_tps']."\n";
 //        }
 //
-        $notifMessage = "*[KawalPemiluBot2019 Made by MitraAnakNegeri]*\n";
+        $notifMessage = "*[KawalPemiluBot2019]*\n";
         $notifMessage .= "Hasil : \n\n";
         $notifMessage .= "--------------------------------------------------\n";
-        $notifMessage .= "*Paslon 1 - Ir.Joko Widodo dan KH.Maruf Amin* \n";
+        $notifMessage .= "*Paslon 01*\n*Ir.Joko Widodo & KH.Maruf Amin*\n";
         $notifMessage .= "--------------------------------------------------\n";
-        $notifMessage .= "Total Suara\t: " .number_format($total['total_pas1'],0)."\n";
-        $notifMessage .= "Prosentase\t: ".number_format(($total['total_pas1']/($total['total_sah']+$total['total_tSah']))*100,2)."%\n\n";
+        $notifMessage .= "Total Suara\t: ".number_format($total['total_pas1'],0)."\n";
+        $notifMessage .= "Prosentase\t: ".number_format(($total['total_pas1']/($total['total_sah']+$total['total_tSah']))*100,2)."%\n";
         $notifMessage .= "--------------------------------------------------\n\n";
         $notifMessage .= "--------------------------------------------------\n";
-        $notifMessage .= "*Paslon 2 - H.Prabowo Subianto dan Sandiaga Uno* \n";
+        $notifMessage .= "*Paslon 02*\n*H.Prabowo Subianto & Sandiaga Uno*\n";
         $notifMessage .= "--------------------------------------------------\n";
         $notifMessage .= "Total Suara\t: ".number_format($total['total_pas2'],0)."\n";
         $notifMessage .= "Prosentase\t: ".number_format(($total['total_pas2']/($total['total_sah']+$total['total_tSah']))*100,2)."%\n";
@@ -67,7 +67,8 @@ class TelegramBotHelper
         $notifMessage .= "Total TPS\t: ".$total['total_tps']."\n";
         $notifMessage .= "--------------------------------------------------\n";
         $notifMessage .= "Note\t: Prosentase lebih dari 100% karena ada data jumlah suara sah dari kedua paslon di beberapa daerah tidak sama dengan total suara sah didaerah tersebut"."\n";
-        $notifMessage .= "Sumber data\t: http://kawalpemilu.org";
+        $notifMessage .= "Sumber data\t: kawalpemilu.org\n\n";
+        $notifMessage .= "by MitraAnakNegeri";
         //dd($notifMessage);
         try{
             return self::sendMessage($notifMessage);
